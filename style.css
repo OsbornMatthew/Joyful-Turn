@@ -501,6 +501,15 @@ p { margin: 0; }
   margin-top: 8px;
   letter-spacing: 0.03em;
 }
+.leader-degree {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold-light);
+  padding: 0.1rem 0.75rem;
+  vertical-align: middle;
+}
 .sparkle { margin-left: 2px; }
 .social-row {
   display: flex;
