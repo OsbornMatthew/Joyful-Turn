@@ -698,6 +698,16 @@ p { margin: 0; }
 }
 .yt-video-visual img { width: 100%; height: 100%; object-fit: cover; }
 .yt-video-visual svg { width: 58px; height: 58px; opacity: 0.85; }
+.yt-video-visual .yt-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  opacity: 1;
+  pointer-events: none;
+}
 
 .yt-video-caption {
   font-size: 1rem;
@@ -749,9 +759,20 @@ p { margin: 0; }
   justify-content: center;
   color: var(--maroon);
   overflow: hidden;
+  position: relative;
 }
 .reel-visual img { width: 100%; height: 100%; object-fit: cover; }
 .reel-visual svg { width: 28px; height: 28px; opacity: 0.85; }
+.reel-visual .reel-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  opacity: 1;
+  pointer-events: none;
+}
 
 .reel-caption {
   font-size: 0.76rem;
@@ -911,6 +932,8 @@ textarea:focus-visible {
   .founder-photo-wrap { max-width: 320px; margin: 0 auto; }
   .section-alt { border-radius: 40px; }
   .ig-post { width: 240px; }
+  .yt-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .reel-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
 }
 
 @media (max-width: 720px) {
@@ -934,6 +957,11 @@ textarea:focus-visible {
   .hero-logo { width: 200px; }
   .founder-wrap { gap: 32px; }
   .ig-post { width: 200px; }
+  .yt-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .yt-video { padding: 14px; gap: 12px; }
+  .yt-video-caption { font-size: 0.88rem; }
+  .reel-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .reel { padding: 8px; gap: 8px; }
 }
 
 @media (max-width: 480px) {
@@ -942,4 +970,11 @@ textarea:focus-visible {
   .hero-actions .btn { width: 100%; justify-content: center; }
   .prayer-form, .founder-wrap, .journey-clay, .mission-clay, .footer-glass { padding: 32px 24px; }
   .ig-post { width: 170px; padding: 14px; gap: 12px; }
+  .yt-grid { grid-template-columns: 1fr; gap: 18px; }
+  .yt-video { padding: 12px; gap: 10px; }
+  .yt-video-caption { font-size: 0.92rem; }
+  .reel-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .reel { padding: 6px; gap: 6px; }
+  .reel-caption { font-size: 0.7rem; }
+  .yt-follow-row .btn, .ig-follow-row .btn { width: 100%; justify-content: center; }
 }
