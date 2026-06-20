@@ -221,10 +221,25 @@ p { margin: 0; }
 
 /* hero logo — increased size, independent from nav's .brand-logo */
 .hero-logo {
-  width: 280px;
-  margin-bottom: 40px;
+  width: 580px;
+  margin-bottom: 10px;
   filter: drop-shadow(0 10px 18px rgba(110,30,20,0.15));
   animation: float-in 1s ease both;
+}
+
+/* Logo video: removes its light/white background by blending darker pixels
+   (the logo mark, text, shadow) against the page's ivory background.
+   Works well because the page background is a similarly warm, light tone —
+   true per-pixel transparency isn't possible from a flattened video source.
+   filter is reset to none here: combining CSS filter + mix-blend-mode on the
+   same element renders inconsistently across browsers (notably Safari), and
+   the video already has its own baked-in shadow from the animation itself. */
+.hero-logo-video {
+  height: auto;
+  filter: none;
+  mix-blend-mode: multiply;
+  background: transparent;
+  border-radius: 12px;
 }
 
 @keyframes float-in {

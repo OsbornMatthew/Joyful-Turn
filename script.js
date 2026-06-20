@@ -20,7 +20,41 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Prayer form — submit via fetch to Netlify, then show success card in place
+// ============================================================
+// HERO LOGO VIDEO — play → hold final frame 10s → repeat
+// ============================================================
+const heroVideo = document.querySelector('.hero-logo-video');
+
+if (heroVideo) {
+  // Remove loop attribute so we can control the cycle manually
+  heroVideo.removeAttribute('loop');
+  heroVideo.loop = false;
+
+  let holdTimer = null;
+
+  function startVideoPlay() {
+    // Reset to beginning and play
+    heroVideo.currentTime = 0;
+    heroVideo.play().catch(() => {
+      // Autoplay blocked — just leave it paused on first frame
+    });
+  }
+
+  heroVideo.addEventListener('ended', () => {
+    // Video finished — hold on last frame for 10 seconds, then loop
+    clearTimeout(holdTimer);
+    holdTimer = setTimeout(() => {
+      startVideoPlay();
+    }, 10000); // 10 000 ms = 10 seconds
+  });
+
+  // Kick off the first play
+  startVideoPlay();
+}
+
+// ============================================================
+// Prayer form — submit via fetch to Netlify, then show success
+// ============================================================
 const prayerForm = document.getElementById('prayerForm');
 const prayerSuccess = document.getElementById('prayerSuccess');
 
