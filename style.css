@@ -731,8 +731,8 @@ p { margin: 0; }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
   margin-bottom: 18px;
 }
 
