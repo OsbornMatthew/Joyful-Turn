@@ -245,16 +245,16 @@ p { margin: 0; }
 }
 
 /* Tablet (~≤ 720px) — already narrower viewport, still readable */
-@media (max-width: 720px) {
+@media (max-width: 820px) {
   .hero-logo {
     width: 300px;
   }
 }
 
 /* Mobile (≤ 480px) — make it fill most of the screen width */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .hero-logo {
-    width: min(340px, 82vw);   /* big but never bleeds off-screen */
+    width: min(440px, 82vw);   /* big but never bleeds off-screen */
     margin-bottom: 28px;
   }
 }
